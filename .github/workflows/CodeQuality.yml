@@ -21,7 +21,7 @@ jobs:
         run: yarn
 
       - name: Strat Server
-        run: yarn
+        run: yarn dev
 
       - name: Check Lint
         run: yarn lint
