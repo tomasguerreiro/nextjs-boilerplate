@@ -1,6 +1,6 @@
 # NextJS Boilerplate
 
-## Teste
+## Dependencies
 
 Bootstrap a developer-friendly NextJS app configured with:
 
