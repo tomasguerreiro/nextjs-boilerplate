@@ -25,6 +25,3 @@ jobs:
 
       - name: Check Types
         run: yarn type-check
-
-      - name: Check Build
-        run: yarn build
