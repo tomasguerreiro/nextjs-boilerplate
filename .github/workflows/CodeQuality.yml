@@ -20,14 +20,8 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Strat Server
-        run: yarn dev
-
       - name: Check Lint
         run: yarn lint
 
       - name: Check Types
         run: yarn type-check
-
-      - name: Check Build
-        run: yarn build
