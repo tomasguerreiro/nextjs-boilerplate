@@ -1,11 +1,10 @@
 name: Code Quality
 
 on:
-  push:
   pull_request:
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
