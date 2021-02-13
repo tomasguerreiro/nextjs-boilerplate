@@ -1,11 +1,11 @@
 import React from 'react';
-import PageWrapper from '../../templates/PageWrapper';
-import Head from 'next/head';
+import { Head } from 'next/document';
 import Link from 'next/link';
+import PageWrapper from '../../templates/PageWrapper';
 
 const HomePage = () => {
   return (
-    <PageWrapper title="Home | Next.js + TypeScript Example">
+    <PageWrapper>
       <Head>
         <title>Home | Next.js + TypeScript Example</title>
       </Head>

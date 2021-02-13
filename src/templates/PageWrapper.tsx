@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 
 type Props = {
   children?: ReactNode;
-  title?: string;
 };
 
 const PageWrapper = ({ children }: Props) => (
