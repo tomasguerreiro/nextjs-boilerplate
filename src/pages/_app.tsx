@@ -1,11 +1,15 @@
-import React from 'react';
-import { AppProps } from 'next/app';
+import App from 'next/app';
 import GlobalStyle from '../core/styles/globalStyle';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <>
-    <Component {...pageProps} />
-    <GlobalStyle />
-  </>
-);
-export default App;
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+
+    return (
+      <>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </>
+    );
+  }
+}

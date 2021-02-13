@@ -7,9 +7,3 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 `;
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-};
