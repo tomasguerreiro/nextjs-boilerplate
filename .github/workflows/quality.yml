@@ -23,4 +23,4 @@ jobs:
         run: yarn lint
 
       - name: Check Types
-        run: yarn type-check
+        run: yarn tsc:check
