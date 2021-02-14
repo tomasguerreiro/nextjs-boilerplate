@@ -1,5 +1,9 @@
+import React from 'react';
 import App from 'next/app';
+import { AppProvider } from 'simple-design-react';
 import GlobalStyle from '../core/styles/globalStyle';
+
+import customTheme from '../core/styles/theme';
 
 export default class MyApp extends App {
   render() {
@@ -8,7 +12,9 @@ export default class MyApp extends App {
     return (
       <>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <AppProvider theme="light" customThemeMode={customTheme}>
+          <Component {...pageProps} />
+        </AppProvider>
       </>
     );
   }

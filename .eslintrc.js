@@ -49,5 +49,6 @@ module.exports = {
     // '@typescript-eslint/no-unused-vars': 'warn',
     'no-unused-vars': 'warn',
     'import/prefer-default-export': 'off',
+    'no-unneeded-ternary': 'off',
   },
 };
