@@ -1,33 +1,27 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'airbnb',
-    'airbnb/hooks',
-    'prettier',
-    'prettier/@typescript-eslint',
-  ],
   env: {
-    es6: true,
     browser: true,
-    jest: true,
+    es2021: true,
     node: true,
   },
-  settings: {
-    react: {
-      version: 'detect',
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     'import/extensions': 'off',
+    'import/no-unresolved': 'off',
     'react/jsx-key': 'error',
     'react/prop-types': 'off',
     'react/no-array-index-key': 'off',
@@ -42,24 +36,19 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'warn',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/indent': 'off',
-    '@typescript-eslint/member-delimiter-style': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      2,
-      {
-        argsIgnorePattern: '^_',
-      },
-    ],
-    'no-console': [
-      2,
-      {
-        allow: ['warn', 'error'],
-      },
-    ],
+    'react/no-unused-prop-types': 'warn',
+    'react/require-default-props': 'off',
+    // '@typescript-eslint/explicit-function-return-type': 'off',
+    // '@typescript-eslint/explicit-member-accessibility': 'off',
+    // '@typescript-eslint/indent': 'off',
+    // '@typescript-eslint/member-delimiter-style': 'off',
+    // '@typescript-eslint/no-explicit-any': 'warn',
+    // '@typescript-eslint/no-var-requires': 'off',
+    // '@typescript-eslint/no-use-before-define': 'off',
+    'no-use-before-define': 'off',
+    // '@typescript-eslint/no-unused-vars': 'warn',
+    'no-unused-vars': 'warn',
+    'import/prefer-default-export': 'off',
+    'no-unneeded-ternary': 'off',
   },
 };

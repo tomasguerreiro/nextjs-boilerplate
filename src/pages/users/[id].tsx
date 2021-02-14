@@ -12,7 +12,7 @@ type Props = {
 const StaticPropsDetail = ({ item, errors }: Props) => {
   if (errors) {
     return (
-      <PageWrapper title="Error | Next.js + TypeScript Example">
+      <PageWrapper>
         <p>
           <span style={{ color: 'red' }}>Error:</span> {errors}
         </p>
@@ -20,15 +20,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
     );
   }
 
-  return (
-    <PageWrapper
-      title={`${
-        item ? item.name : 'User Detail'
-      } | Next.js + TypeScript Example`}
-    >
-      {item && <ListDetail item={item} />}
-    </PageWrapper>
-  );
+  return <PageWrapper>{item && <ListDetail item={item} />}</PageWrapper>;
 };
 
 export default StaticPropsDetail;
