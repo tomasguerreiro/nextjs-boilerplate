@@ -1,9 +1,10 @@
 import React from 'react';
 
+import { FooterStyled } from './styled';
+
 const Footer = () => (
-  <footer>
-    <hr />
-    <span>I'm here to stay (Footer)</span>
-  </footer>
+  <FooterStyled>
+    <span>I'm here to stay ❤</span>
+  </FooterStyled>
 );
 export default Footer;
