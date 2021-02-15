@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head } from 'next/document';
+import Head from 'next/head';
 import Link from 'next/link';
 import PageWrapper from '../../templates/PageWrapper';
 
