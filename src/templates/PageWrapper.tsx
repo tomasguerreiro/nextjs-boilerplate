@@ -1,14 +1,15 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
+import { Container } from 'simple-design-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { PageWrapperStyled } from './styled';
 
-type Props = {
+interface PageWrapperProps {
   children?: ReactNode;
-};
+}
 
-const PageWrapper = ({ children }: Props) => (
+const PageWrapper = ({ children }: PageWrapperProps) => (
   <>
     <Head>
       <title>Hello</title>
@@ -17,7 +18,9 @@ const PageWrapper = ({ children }: Props) => (
     </Head>
     <PageWrapperStyled id="page-wrapper">
       <Header />
-      <main>{children}</main>
+      <main>
+        <Container>{children}</Container>
+      </main>
       <Footer />
     </PageWrapperStyled>
   </>
