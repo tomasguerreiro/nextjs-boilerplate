@@ -16,7 +16,8 @@ export const HeaderStyled = styled.header`
     height: 100%;
     padding: 0.5rem 0;
 
-    img {
+    img,
+    svg {
       display: block;
       height: 100%;
     }
