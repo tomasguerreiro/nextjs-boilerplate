@@ -6,7 +6,9 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
+import { GFonts } from '../core/fonts/GFonts';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -41,11 +43,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet"
-          />
+          <GFonts href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" />
+          <GFonts href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" />
         </Head>
         <body>
           <Main />

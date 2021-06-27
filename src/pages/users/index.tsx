@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import { User } from '../../components/user/User';
+import { User } from '../../modules/user/User';
 import PageWrapper from '../../templates/PageWrapper';
-import List from '../../components/user/UserList';
+import List from '../../modules/user/UserList';
 import api from '../../core/api';
 
 type Props = {

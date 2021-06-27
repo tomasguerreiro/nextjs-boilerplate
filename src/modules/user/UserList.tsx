@@ -8,7 +8,7 @@ type Props = {
 
 const UserList = ({ items }: Props) => (
   <ul>
-    {items.map((item) => (
+    {items?.map((item) => (
       <li key={item.id}>
         <UserItem data={item} />
       </li>
