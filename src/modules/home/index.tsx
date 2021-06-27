@@ -8,6 +8,10 @@ const HomePage = () => {
     <PageWrapper>
       <Head>
         <title>Home | Next.js + TypeScript Example</title>
+        <meta
+          name="description"
+          content="Boilerplate NextJS com configurações JEDI para iniciar um projeto massa"
+        />
       </Head>
       <h1>Hello Next.js🧨</h1>
       <p>
