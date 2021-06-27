@@ -26,7 +26,9 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get('/users');
+  //   const { data } = await api.get('/users');
+  const req = await fetch('http://localhost:3000/users');
+  const data = await req.json();
   const paths = data.map((user: any) => ({
     params: { id: user.id.toString() },
   }));
@@ -37,7 +39,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;
-    const { data } = await api.get('/users');
+    const req = await fetch('http://localhost:3000/users');
+    const data = await req.json();
+    // const { data } = await api.get('/users');
     const item = data.find((dt: any) => dt.id === Number(id));
     return { props: { item } };
   } catch (err) {

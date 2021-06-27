@@ -26,7 +26,9 @@ const WithStaticProps = ({ items }: Props) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await api.get('/users');
+  //   const res = await api.get('/users');
+  const req = await fetch('http://localhost:3000/users');
+  const res = await req.json();
   const items: User[] = res.data as User[];
   return { props: { items } };
 };
