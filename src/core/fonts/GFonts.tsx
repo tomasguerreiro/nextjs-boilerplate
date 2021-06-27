@@ -15,7 +15,6 @@ export const GFonts = ({ href }: FontProps) => {
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
-          id="gf-loaded"
         />
       )}
       <link rel="preload" as="style" href={href} />
