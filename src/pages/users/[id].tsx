@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import PageWrapper from '../../templates/PageWrapper';
-import ListDetail from '../../components/user/UserDetail';
-import { User } from '../../components/user/User';
+import ListDetail from '../../modules/user/UserDetail';
+import { User } from '../../modules/user/User';
 import api from '../../core/api';
 
 type Props = {
