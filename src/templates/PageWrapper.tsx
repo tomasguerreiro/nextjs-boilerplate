@@ -13,8 +13,8 @@ interface PageWrapperProps {
 }
 
 const PageWrapper = ({ children }: PageWrapperProps) => {
-  const router = useRouter();
   const { cookie } = useAppLocal();
+  const router = useRouter();
   const gtm = useGTM();
 
   useEffect(() => {
