@@ -13,15 +13,15 @@ interface PageWrapperProps {
 }
 
 const PageWrapper = ({ children }: PageWrapperProps) => {
-  const { cookie } = useAppLocal();
+  const { isAcceptedPolicies } = useAppLocal();
   const router = useRouter();
   const gtm = useGTM();
 
   useEffect(() => {
-    if (cookie.isAcceptedPolicies) {
+    if (isAcceptedPolicies) {
       gtm.init(router.pathname);
     }
-  }, [router.pathname, cookie.isAcceptedPolicies]);
+  }, [router.pathname, isAcceptedPolicies]);
 
   return (
     <>
