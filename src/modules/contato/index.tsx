@@ -32,7 +32,7 @@ const Contato = () => {
             value={inputs.nome || ''}
             onChange={handleInputChange}
             label="Nome"
-            validation={['required']}
+            validation={{ required: true }}
             message={
               erros.nome ? erros.nome : 'Seu nome esta seguro com a gente'
             }
