@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import PageWrapper from '../../templates/PageWrapper';
+import PageWrapper from '../../templates/PageWrapper/Index';
 
 const HomePage = () => {
   return (

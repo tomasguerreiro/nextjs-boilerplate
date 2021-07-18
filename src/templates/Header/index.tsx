@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { HeaderStyled } from './styled';
+import { HeaderStyled } from './styles/styled';
 
 const Header = () => {
   return (

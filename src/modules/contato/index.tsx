@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import { Container, Form, Input, useForm } from 'simple-design-react';
-import PageWrapper from '../../templates/PageWrapper';
+import PageWrapper from '../../templates/PageWrapper/Index';
 
 const Contato = () => {
   const {

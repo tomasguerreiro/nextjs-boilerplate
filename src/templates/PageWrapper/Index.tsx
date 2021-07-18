@@ -2,11 +2,11 @@ import React, { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Container from 'simple-design-react/lib/components/Container';
-import Header from './Header';
-import Footer from './Footer';
-import { PageWrapperStyled } from './styled';
-import { useAppLocal } from '../core/context/AppLocalProvider';
-import { useGTM } from '../core/analytics/GTM';
+import Header from '../Header';
+import Footer from '../Footer';
+import { PageWrapperStyled } from './styles/styled';
+import { useAppLocal } from '../../core/context/AppLocalProvider';
+import { useGTM } from '../../core/analytics/GTM';
 
 interface PageWrapperProps {
   children: ReactNode;
