@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import { Container, Form, Input, useForm } from 'simple-design-react';
-import PageWrapper from '../../templates/PageWrapper';
+import PageWrapper from '../../templates/PageWrapper/Index';
 
 const Contato = () => {
   const {
@@ -32,7 +32,7 @@ const Contato = () => {
             value={inputs.nome || ''}
             onChange={handleInputChange}
             label="Nome"
-            validation={['required']}
+            validation={{ required: true }}
             message={
               erros.nome ? erros.nome : 'Seu nome esta seguro com a gente'
             }

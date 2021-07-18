@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import { AppProvider } from 'simple-design-react/lib/providers/AppContext';
+import { SimpleDesignProvider } from 'simple-design-react/lib/providers/SimpleDesignProvider';
 import GlobalStyle from '../core/styles/globalStyle';
 import { AppLocalProvider } from '../core/context/AppLocalProvider';
 import customTheme from '../core/styles/theme';
@@ -12,9 +12,9 @@ export default class MyApp extends App {
     return (
       <AppLocalProvider>
         <GlobalStyle />
-        <AppProvider theme="light" customThemeMode={customTheme}>
+        <SimpleDesignProvider theme="light" customThemeMode={customTheme}>
           <Component {...pageProps} />
-        </AppProvider>
+        </SimpleDesignProvider>
       </AppLocalProvider>
     );
   }

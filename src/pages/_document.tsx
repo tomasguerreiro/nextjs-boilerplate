@@ -8,6 +8,7 @@ import Document, {
 } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
+import { GTM } from '../core/analytics/GTM';
 import { GFonts } from '../core/fonts/GFonts';
 
 export default class MyDocument extends Document {
@@ -45,6 +46,7 @@ export default class MyDocument extends Document {
         <Head>
           <GFonts href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" />
           <GFonts href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" />
+          <GTM />
         </Head>
         <body>
           <Main />
